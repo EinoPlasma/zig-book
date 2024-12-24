@@ -7,7 +7,7 @@
 <a href=""><img src="Cover/cover-artv3.png" width="250" height="366" class="cover" align="right"/></a>
 
 嘿！这是Pedro Duarte Faria写的《Zig语言入门：一本基于项目的书》的官方仓库（的非官方中文翻译）。
-想知道更多关于这本书的事儿吗？往下看看[关于本书](#about-this-book)这部分就行。
+想知道更多关于这本书的事儿吗？往下看看[关于本书](#关于本书)这部分就行。
 你可以在浏览器里直接阅读本书的最新版：<https://pedropark99.github.io/zig-book/>。
 
 本书用的是[Quarto](https://quarto.org)出版系统，还加了一点R代码（`zig_engine.R`），负责调用Zig编译器来编译和运行那些Zig代码例子。
@@ -47,11 +47,11 @@ BIC/SWIFT代码：REVOSGS2
 
 ## 关于本书
 
-这是一本开放（即开源）、技术性和入门性的书籍，面向[Zig编程语言](https://ziglang.org/)。Zig是一种新的通用低级编程语言，专为打造最优且健壮的软件而生。
+这是一本开源的入门向技术书籍，面向[Zig编程语言](https://ziglang.org/)。Zig是一种新的通用低级编程语言，专为打造最优且健壮的软件而生。
 
 本书的官方仓库：<https://github.com/pedropark99/zig-book>。
 
-无论你是初学者还是有经验的老手，这本书都适合你。它通过小项目（类似于Eric Matthes的《Python Crash Course》）带你走进Zig的精彩世界。这些项目包括：Base64编码器/解码器、HTTP服务器和图像滤镜。
+无论你是萌新还是有经验的老手，这本书都适合你。它通过小项目（类似于Eric Matthes的《Python Crash Course》）带你走进Zig的精彩世界。这些项目包括：Base64编码器/解码器、HTTP服务器和图像滤镜。
 
 通过这本书，你会学到：
 
