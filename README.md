@@ -1,141 +1,112 @@
-# Introduction to Zig
+# 《Zig语言入门》（Introduction to Zig）
+
+正在翻译中
+
+---
 
 <a href=""><img src="Cover/cover-artv3.png" width="250" height="366" class="cover" align="right"/></a>
 
-Hey! This is the official repository for the book "Introduction to Zig: a project-based book", written by Pedro Duarte Faria.
-To know more about the book, checkout the [About this book](#about-this-book) section below.
-You can read the current version of the book in your web browser: <https://pedropark99.github.io/zig-book/>.
+嘿！这是Pedro Duarte Faria写的《Zig语言入门：一本基于项目的书》的官方仓库（的非官方中文翻译）。
+想知道更多关于这本书的事儿吗？往下看看[关于本书](#about-this-book)这部分就行。
+你可以在浏览器里直接阅读本书的最新版：<https://pedropark99.github.io/zig-book/>。
 
-The book is built using the publishing system [Quarto](https://quarto.org)
-in conjunction with a little bit of R code (`zig_engine.R`), that is responsible for calling
-the Zig compiler to compile and run the Zig code examples.
+本书用的是[Quarto](https://quarto.org)出版系统，还加了一点R代码（`zig_engine.R`），负责调用Zig编译器来编译和运行那些Zig代码例子。
 
+## 支持这个项目！
 
-## Support the project!
-
-If you like this project, and you want to support it, you can buy an eBook or a physical copy
-of the book on Amazon:
+如果你觉得这个项目不错，想支持一波，可以去Amazon上买电子书或者实体书：
 
 <https://www.amazon.com/dp/B0DJYMDRLP>
 
-### Sending donations directly
+### 直接给作者打钱
 
-You can also donate some amount directly to the author of the project via:
+你还可以通过以下方式直接向作者捐点小费：
 
-- PayPal Donation.
-- Revolut.
+- 通过PayPal捐赠。
+- 通过Revolut转账。
 
-These are good ways to support directly the author of the project, which helps to foster
-more contents like this, and it makes possible for the author to keep writing helpful tools and
-materials for the community.
+这些捐款能帮作者继续创作类似的内容，还能让他有精力为社区编写更多有用的工具和材料。
 
 ### PayPal
 
 [![PayPal](https://img.shields.io/badge/PayPal-003087?logo=paypal&logoColor=fff)](https://www.paypal.com/donate/?business=D58J5LFEERC3N&no_recurring=0&item_name=These+donations+make+it+possible+for+me+to+continue+writing+new+and+useful+content+for+our+community%F0%9F%98%89+Thank+you%21%E2%9D%A4%EF%B8%8F%F0%9F%A5%B3&currency_code=USD)
 
-
 ### Revolut
 
-You can send money via Swift Payment with the following bank and Swift details:
+如果你想用Swift支付，可以用以下银行和Swift信息：
 
 ```
-Recipient: Pedro Duarte Faria
-BIC/SWIFT Code: REVOSGS2
-Account number: 6124512226
-Name and address of the bank: Revolut Technologies Singapore Pte. Ltd, 6 Battery Road, Floor 6-01, 049909, Singapore, Singapore
-Corresponding BIC: CHASGB2L
+收款人：Pedro Duarte Faria
+BIC/SWIFT代码：REVOSGS2
+账户号码：6124512226
+银行名称和地址：Revolut Technologies Singapore Pte. Ltd, 6 Battery Road, Floor 6-01, 049909, Singapore, Singapore
+对应BIC：CHASGB2L
 ```
 
-If you do have a Revolut account, you can scan the following QR code:
+要是你有Revolut账户，扫下面的二维码就行：
 
-<http://revolut.me/pedroduartefaria>
+## 关于本书
 
+这是一本开放（即开源）、技术性和入门性的书籍，面向[Zig编程语言](https://ziglang.org/)。Zig是一种新的通用低级编程语言，专为打造最优且健壮的软件而生。
 
+本书的官方仓库：<https://github.com/pedropark99/zig-book>。
 
+无论你是初学者还是有经验的老手，这本书都适合你。它通过小项目（类似于Eric Matthes的《Python Crash Course》）带你走进Zig的精彩世界。这些项目包括：Base64编码器/解码器、HTTP服务器和图像滤镜。
 
-## About this book
+通过这本书，你会学到：
 
-This is an open (i.e. it is open-source), technical and introductory book for the [Zig programming language](https://ziglang.org/),
-which is a new general purpose, and low-level programming language for building optimal and robust software.
+- Zig的语法，以及它与C、C++和Rust的区别。
+- 数据结构、内存分配器、文件系统和I/O操作。
+- Optionals——一种处理空值的新范式。
+- 如何测试和调试Zig应用程序。
+- 把错误当作值来处理的方法。
+- 使用嵌入在语言中的构建系统来编译C和Zig代码。
+- Zig与C的互操作。
+- 利用多线程和SIMD实现并行计算。
+- 还有很多其他内容。
 
-Official repository of the book: <https://github.com/pedropark99/zig-book>.
+## 如何构建本书
 
-This book is designed for both beginners and experienced developers. It explores the exciting world of Zig through small
-and simple projects (in a similar style to the famous "Python Crash Course" book from Eric Matthes).
-Some of these projects are: a Base64 encoder/decoder, a HTTP Server and an image filter.
+本书依赖三款主要软件：
 
-As you work through the book, you will learn:
+1. [Zig编译器](https://ziglang.org/download/)，用来编译书中大部分代码示例。
+2. [R编程语言](https://cran.r-project.org/)，提供一些有用的工具来收集代码示例，并将它们发送给Zig编译器进行编译和执行，同时收集结果以包含在书中。
+3. [Quarto出版系统](https://quarto.org/docs/get-started/)，用于编译本书，创建内部链接、引用、章节结构和HTML内容等。
 
-- The syntax of the language, and how it compares to C, C++ and Rust.
-- Data structures, memory allocators, filesystem and I/O.
-- Optionals as a new paradigm to handle nullability.
-- How to test and debug a Zig application.
-- Errors as values, and how to handle them.
-- How to build C and Zig code with the build system that is embedded into the language.
-- Zig interoperability with C.
-- Parallelism with threads and SIMD.
-- And more.
+所以，首先你需要在你的机器上安装这三款软件。
 
+你可以通过点击上面的超链接找到如何安装这些软件的说明。
 
+### 安装R包
 
-## How to build the book
+在你搞定上面列出的三个软件后，下一步就是跑一下`dependencies.R`这个R脚本，来装上本书要用到的各种R包。只需要在你的终端里敲下下面这行命令就好，一切应该会顺利搞定。
 
-This book depends on the three main pieces of software:
-
-1. The [Zig compiler](https://ziglang.org/download/), which is responsible for compiling most of the code examples exposed in the book.
-2. The [R programming language](https://cran.r-project.org/), which provides some useful tools to collect the code examples exposed across the book, and send them to the zig compiler to be compiled and executed, and also, collect the results back to include them in the book.
-3. The [Quarto publishing system](https://quarto.org/docs/get-started/), which provides the useful tools to compile the book, creating internal links, references, a chapters structure, the HTML content of the book, etc.
-
-So, you first need to install these three pieces of software in your current machine.
-You can find instructions on how to install these pieces of software by clicking in the above hyperlinks.
-
-### Install R packages
-
-After you installed the three pieces of software listed above, you should run the `dependencies.R` R script, to install
-some R packages that are used across the book. Just run the command below in your terminal, and you should be fine.
-
-OBS: If you are on Linux or MacOS, this command will probably take some time to run, because every single dependency get's built from source.
-In Windows, this usually doesn't take that long because pre-built binaries are usually available.
+注意：如果你用的是Linux或MacOS，这个过程可能会有点耗时，因为每个依赖项都得从源码构建。而在Windows上，这通常很快，因为一般有预构建的二进制文件可用。
 
 ```bash
 Rscript dependencies.R
 ```
 
-### Render the book
+### 渲染书籍
 
-If you installed Quarto correctly in your computer
-, you should be able to build the book by simply executing
-the following command in the terminal.
+要是你在电脑上已经正确安好了Quarto，那接下来构建这本书就很简单了。只要在终端里执行下面这行命令就好。
 
 ```bash
 quarto render
 ```
 
-### How the Zig compiler is found
+### 脚本如何找到Zig编译器的路径
 
-Some R code (`zig_engine.R`) is used to collect the Zig code examples
-found across the book, and send them to the Zig compiler, so that they
-can be compiled and executed.
+有些R代码（`zig_engine.R`）用来收集书中各个地方的Zig代码示例，并把它们送给Zig编译器去编译和执行。
 
-But in order to do that, this R code needs to find the Zig compiler installed
-in your machine. This search process is done in two stages.
-First, it uses the [`Sys.which()` function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Sys.which)
-to find the path to the Zig compiler in your computer, which is just a R interface to the `which` command line tool.
+但这之前，这段R代码得先找到你机器上装着的Zig编译器。这个搜索分两步走。首先，它会用[`Sys.which()`函数](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Sys.which)来找Zig编译器的路径，这其实就是`which`命令行工具的一个R接口。
 
-This is a fast and easy approach, but, it doesn't work in all situations, specially if
-your Zig compiler is not installed in a "standard location" in your computer. That is
-why, a second strategy is applied, which is to search through the PATH environment variable.
+这是个快速又简单的方法，但不是所有情况下都管用，特别是当你的Zig编译器没装在标准位置的时候。所以，就有了第二招：搜PATH环境变量。
 
-It gets the value of your PATH environment variable, and iterates through the directories listed
-in this variable, trying to find the Zig compiler in one of them. This approach is much
-slower than the first one, but is more garanteed to work.
-
-
+它会获取你的PATH环境变量的值，然后挨个检查里面列出的目录，试着在里面找Zig编译器。虽然这种方法慢很多，但成功率高。
 
 ## License
 
-Copyright © 2024 Pedro Duarte Faria. This book is licensed by the CC-BY 4.0 Creative Commons Attribution 4.0 International Public License.
+Copyright © 2024 Pedro Duarte Faria。本书采用CC-BY 4.0 Creative Commons Attribution 4.0 International Public License许可。
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-
-
